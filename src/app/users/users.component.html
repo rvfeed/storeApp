@@ -1,0 +1,38 @@
+<div class="container contacts">
+  <h3>External Contacts</h3>
+  <p>Select the client contacts associated with this offer</p>
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Type</th>
+      <th scope="col">Name</th>
+      <th scope="col">Title</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Ext</th>
+      <th scope="col">Fax</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contact of contacts" >
+      <td scope="row">
+     
+            <input class="form-control" type="checkbox" id="{{contact.id}}" 
+            [value]="contact.id" (click)="selectContact($event)"/>
+        
+      
+        
+      </td>
+      <td>{{contact.type}}</td>
+      <td>{{contact.name}}</td>
+      <td>{{contact.title}}</td>
+      <td>{{contact.phone}}</td>
+      <td>{{contact.ext}}</td>
+      <td>{{contact.fax}}</td>
+      <td>{{contact.email}}</td>
+    </tr>
+   
+  </tbody>
+</table>
+</div>
